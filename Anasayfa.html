@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tek Alçıpan Profil Sistemleri - Dünyayı Profilliyoruz</title>
+    <meta name="description" content="Tek Alçıpan Profil Sistemleri - Yüksek kaliteli alçıpan profil sistemleri ile inşaat sektörüne profesyonel çözümler sunuyoruz. Dünyayı Profilliyoruz.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/Logo.png">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tekalcipanprofil.com/">
+    <meta property="og:title" content="Tek Alçıpan Profil Sistemleri - Dünyayı Profilliyoruz">
+    <meta property="og:description" content="Yüksek kaliteli alçıpan profil sistemleri ile inşaat sektörüne profesyonel çözümler sunuyoruz.">
+    <meta property="og:image" content="media/Logo.png">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tek Alçıpan Profil Sistemleri",
+        "url": "https://tekalcipanprofil.com",
+        "logo": "media/Logo.png",
+        "description": "Yüksek kaliteli alçıpan profil sistemleri ile inşaat sektörüne profesyonel çözümler sunuyoruz.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11",
+            "addressLocality": "Çayırova",
+            "addressRegion": "Kocaeli",
+            "addressCountry": "TR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+90-548-630-16-48",
+            "contactType": "customer service",
+            "email": "tek_profil@hotmail.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="loading-logo-img">
+            </div>
+            <div class="loading-text">
+                <h2>Tek Alçıpan Profil Sistemleri</h2>
+                <p>Dünyayı Profilliyoruz...</p>
+            </div>
+            <div class="loading-animation">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="premium-nav" id="premiumNav">
+        <div class="nav-container">
+            <!-- Brand -->
+            <a href="Anasayfa.html" class="nav-brand">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="nav-logo-img">
+                <div class="nav-brand-info">
+                    <h1 class="nav-brand-title">Tek Alçıpan</h1>
+                    <p class="nav-brand-subtitle">
+                        <span class="subtitle-line">Profil Sistemleri</span>
+                        <span class="subtitle-name">Dünyayı Profilliyoruz</span>
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="Urunler.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Ürünler</span>
+                </a>
+                <a href="Iletisim.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>İletişim</span>
+                </a>
+            </div>
+
+            <!-- Emergency Actions -->
+            <div class="nav-emergency">
+                <a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" 
+                   target="_blank" class="location-btn" title="Konumumuzu Görüntüle">
+                    <div class="location-btn-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="location-text">
+                            <strong>Konum</strong>
+                            <small>Çayırova, Kocaeli</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://wa.me/905486301648?text=Merhaba, Tek Alçıpan Profil Sistemleri hakkında bilgi almak istiyorum." 
+                   target="_blank" class="whatsapp-btn" title="WhatsApp'tan Yazın">
+                    <div class="whatsapp-btn-content">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="whatsapp-text">
+                            <strong>WhatsApp</strong>
+                            <small>Hızlı İletişim</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="tel:+905486301648" class="emergency-btn" title="Hemen Ara">
+                    <div class="emergency-btn-content">
+                        <i class="fas fa-phone"></i>
+                        <div class="emergency-text">
+                            <strong>0548 630 16 48</strong>
+                            <small>7/24 Destek</small>
+                        </div>
+                    </div>
+                    <div class="emergency-pulse"></div>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü Aç/Kapat">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background">
+            <!-- Hero Slides -->
+            <div class="hero-slide active" data-bg="media/Slider1.png"></div>
+            <div class="hero-slide" data-bg="media/Slider2.png"></div>
+            <div class="hero-slide" data-bg="media/Slider3.png"></div>
+            <div class="hero-slide" data-bg="media/Slider4.png"></div>
+            <div class="hero-slide" data-bg="media/Slider5.png"></div>
+            <div class="hero-slide" data-bg="media/Slider6.png"></div>
+            <div class="hero-slide" data-bg="media/Slider7.png"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-container">
+                <div class="hero-title" data-aos="fade-up" data-aos-delay="300">
+                    <span class="title-line">Dünyayı</span>
+                    <span class="title-line">Profilliyoruz...</span>
+                </div>
+                
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+                    <span class="gradient-text">Tek Alçıpan Profil Sistemleri</span> ile inşaat sektörünün 
+                    güvenilir partneri. Yüksek kaliteli profil sistemleriyle projelerinize değer katıyoruz.
+                </p>
+                
+                <div class="hero-features" data-aos="fade-up" data-aos-delay="900">
+                    <div class="hero-feature">
+                        <i class="fas fa-award"></i>
+                        <span>Premium Kalite</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Hızlı Teslimat</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-tools"></i>
+                        <span>Uzman Ekip</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="1200">
+                    <a href="Urunler.html" class="hero-btn primary">
+                        <span>Ürünleri Keşfet</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="https://wa.me/905486301648?text=Merhaba, Tek Alçıpan Profil Sistemleri hakkında bilgi almak istiyorum." 
+                       target="_blank" class="hero-btn whatsapp-hero">
+                        <span>WhatsApp'tan Yazın</span>
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="Iletisim.html" class="hero-btn secondary">
+                        <span>İletişime Geç</span>
+                        <i class="fas fa-phone"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Navigation -->
+        <div class="hero-navigation">
+            <button class="hero-nav-btn" id="heroPrev" aria-label="Önceki Slayt">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn" id="heroNext" aria-label="Sonraki Slayt">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Hero Indicators -->
+        <div class="hero-indicators">
+            <button class="hero-indicator active" data-slide="0" aria-label="Slayt 1"></button>
+            <button class="hero-indicator" data-slide="1" aria-label="Slayt 2"></button>
+            <button class="hero-indicator" data-slide="2" aria-label="Slayt 3"></button>
+            <button class="hero-indicator" data-slide="3" aria-label="Slayt 4"></button>
+            <button class="hero-indicator" data-slide="4" aria-label="Slayt 5"></button>
+            <button class="hero-indicator" data-slide="5" aria-label="Slayt 6"></button>
+            <button class="hero-indicator" data-slide="6" aria-label="Slayt 7"></button>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <p>Aşağı Kaydır</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <div class="section-badge">Demo Video</div>
+                <h2 class="section-title">Süreçlerimizi Keşfedin</h2>
+                <p class="section-subtitle">
+                    Tek Alçıpan Profil Sistemleri'nin kaliteli üretim sürecini ve 
+                    profesyonel hizmet anlayışını yakından görün.
+                </p>
+            </div>
+            
+            <div class="video-container" data-aos="zoom-in" data-aos-delay="300">
+                <video 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    poster="media/Slider1.png"
+                    aria-label="Tek Alçıpan Profil Sistemleri Demo Video">
+                    <source src="media/demo.mp4" type="video/mp4">
+                    <p>Tarayıcınız video oynatmayı desteklemiyor. 
+                       <a href="media/demo.mp4">Video'yu indirip izleyebilirsiniz</a>.
+                    </p>
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <p class="stat-label">Yıllık Tecrübe</p>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <p class="stat-label">Mutlu Müşteri</p>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="stat-number" data-count="1000">0</div>
+                    <p class="stat-label">Tamamlanan Proje</p>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <p class="stat-label">Kalite Garantisi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- About Text -->
+                <div class="about-text">
+                    <div class="section-header" data-aos="fade-right">
+                        <div class="section-badge">Hakkımızda</div>
+                        <h2 class="section-title">Tek Alçıpan Profil Sistemleri</h2>
+                        <p class="section-subtitle">
+                            15 yıllık tecrübemizle inşaat sektöründe güvenilir bir partner olarak, 
+                            yüksek kaliteli alçıpan profil sistemleri üretimi ve satışı yapmaktayız.
+                        </p>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="200">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Kaliteli Üretim</h3>
+                                <p>Avrupa standartlarında üretim yaparak, dayanıklı ve güvenilir profil sistemleri sunuyoruz.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="400">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Uzman Ekip</h3>
+                                <p>Alanında uzman teknik ekibimizle her projeye özel çözümler geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature" data-aos="fade-right" data-aos-delay="600">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Hızlı Teslimat</h3>
+                                <p>Geniş stok kapasitemiz ve etkili lojistik ağımızla zamanında teslimat garantisi veriyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta" data-aos="fade-right" data-aos-delay="800">
+                        <a href="Urunler.html" class="premium-btn primary large">
+                            <span>Ürünlerimizi İncele</span>
+                            <i class="fas fa-arrow-right"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="Iletisim.html" class="premium-btn secondary large">
+                            <span>Fiyat Teklifi Al</span>
+                            <i class="fas fa-calculator"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- About Visual -->
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image-container">
+                        <div class="about-image-wrapper">
+                            <img src="media/a1.jpg" alt="Tek Alçıpan Profil Sistemleri" class="about-image">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Süreçlerimizi İzle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand-section">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="media/Logo.png" alt="Tek Alçıpan Logo">
+                        </div>
+                        <div class="footer-brand-info">
+                            <h3>Tek Alçıpan Profil Sistemleri</h3>
+                            <p>Kocaeli, Türkiye</p>
+                            <p class="footer-motto">"Dünyayı Profilliyoruz"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Bağlantılar</h4>
+                        <ul>
+                            <li><a href="Anasayfa.html">Anasayfa</a></li>
+                            <li><a href="Urunler.html">Ürünler</a></li>
+                            <li><a href="Iletisim.html">İletişim</a></li>
+                            <li><a href="#about">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Ürün Kategorileri</h4>
+                        <ul>
+                            <li><a href="Urunler.html">Alçıpan Profilleri</a></li>
+                            <li><a href="Urunler.html">Metal Profiller</a></li>
+                            <li><a href="Urunler.html">Aksesuarlar</a></li>
+                            <li><a href="Urunler.html">Özel Üretim</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>İletişim Bilgileri</h4>
+                        <ul>
+                            <li><a href="tel:+905486301648">0548 630 16 48</a></li>
+                            <li><a href="mailto:tek_profil@hotmail.com">tek_profil@hotmail.com</a></li>
+                            <li><a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" target="_blank">Çayırova, Kocaeli</a></li>
+                            <li><a href="Iletisim.html">İletişim Formu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Footer Emergency -->
+                <div class="footer-emergency">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="emergency-content">
+                            <h4>7/24 Destek Hattı</h4>
+                            <p>Profesyonel destek için</p>
+                            <a href="tel:+905486301648" class="emergency-number">0548 630 16 48</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; Tek Alçıpan Profil Sistemleri. Tüm hakları saklıdır.</p>
+                    <p class="footer-love">❤️ ile Kocaeli'den</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Scroll Button -->
+    <button class="dynamic-scroll-btn visible" id="dynamicScrollBtn" aria-label="Dinamik Scroll">
+        <span class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Loading Screen Script -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

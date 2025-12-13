@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Tek Alçıpan Profil Sistemleri</title>
+    <meta name="description" content="Tek Alçıpan Profil Sistemleri ile iletişime geçin. Çayırova, Kocaeli adresimizden bizi ziyaret edin veya telefon ile ulaşın.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/Logo.png">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tekalcipanprofil.com/iletisim">
+    <meta property="og:title" content="İletişim - Tek Alçıpan Profil Sistemleri">
+    <meta property="og:description" content="Çayırova, Kocaeli adresimizden bizi ziyaret edin veya telefon ile ulaşın. 7/24 profesyonel destek.">
+    <meta property="og:image" content="media/Logo.png">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "İletişim - Tek Alçıpan Profil Sistemleri",
+        "url": "https://tekalcipanprofil.com/iletisim",
+        "description": "Tek Alçıpan Profil Sistemleri iletişim bilgileri ve konum.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Tek Alçıpan Profil Sistemleri",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11",
+                "addressLocality": "Çayırova",
+                "addressRegion": "Kocaeli",
+                "addressCountry": "TR"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+90-548-630-16-48",
+                "contactType": "customer service",
+                "email": "tek_profil@hotmail.com"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="loading-logo-img">
+            </div>
+            <div class="loading-text">
+                <h2>İletişime Geçin</h2>
+                <p>Size Nasıl Yardımcı Olabiliriz?</p>
+            </div>
+            <div class="loading-animation">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="premium-nav" id="premiumNav">
+        <div class="nav-container">
+            <!-- Brand -->
+            <a href="Anasayfa.html" class="nav-brand">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="nav-logo-img">
+                <div class="nav-brand-info">
+                    <h1 class="nav-brand-title">Tek Alçıpan</h1>
+                    <p class="nav-brand-subtitle">
+                        <span class="subtitle-line">Profil Sistemleri</span>
+                        <span class="subtitle-name">Dünyayı Profilliyoruz</span>
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="Urunler.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Ürünler</span>
+                </a>
+                <a href="Iletisim.html" class="nav-link active">
+                    <i class="fas fa-envelope"></i>
+                    <span>İletişim</span>
+                </a>
+            </div>
+
+            <!-- Emergency Actions -->
+            <div class="nav-emergency">
+                <a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" 
+                   target="_blank" class="location-btn" title="Konumumuzu Görüntüle">
+                    <div class="location-btn-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="location-text">
+                            <strong>Konum</strong>
+                            <small>Çayırova, Kocaeli</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://wa.me/905486301648?text=Merhaba, size ulaşmak istiyorum." 
+                   target="_blank" class="whatsapp-btn" title="WhatsApp'tan Yazın">
+                    <div class="whatsapp-btn-content">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="whatsapp-text">
+                            <strong>WhatsApp</strong>
+                            <small>Hızlı İletişim</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="tel:+905486301648" class="emergency-btn" title="Hemen Ara">
+                    <div class="emergency-btn-content">
+                        <i class="fas fa-phone"></i>
+                        <div class="emergency-text">
+                            <strong>0548 630 16 48</strong>
+                            <small>7/24 Destek</small>
+                        </div>
+                    </div>
+                    <div class="emergency-pulse"></div>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü Aç/Kapat">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" style="padding-top: 140px;">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center" data-aos="fade-up">
+                <div class="section-badge">İletişim</div>
+                <h2 class="section-title">Size Nasıl Yardımcı Olabiliriz?</h2>
+                <p class="section-subtitle">
+                    Profesyonel ekibimiz size en iyi hizmeti sunmak için hazır. 
+                    Sorularınız ve projeleriniz için bizimle iletişime geçin.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-items">
+                        <!-- Contact Person -->
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="contact-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>İletişim Sorumlusu</h4>
+                                <p><strong>Yusuf HAPCI</strong></p>
+                                <small>Satış ve Müşteri Hizmetleri</small>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+905486301648">0548 630 16 48</a></p>
+                                <small>7/24 Ulaşabilirsiniz</small>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-posta</h4>
+                                <p><a href="mailto:tek_profil@hotmail.com">tek_profil@hotmail.com</a></p>
+                                <small>24 saat içinde yanıtlıyoruz</small>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="400">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Adres</h4>
+                                <p>Şekerpınar Mahallesi<br>
+                                   Fevzi Çakmak caddesi no:11<br>
+                                   Çayırova, Kocaeli</p>
+                                <small>Pazartesi - Cumartesi: 08:00 - 18:00</small>
+                            </div>
+                        </div>
+
+                        <!-- Working Hours -->
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="500">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Çalışma Saatleri</h4>
+                                <p><strong>Pazartesi - Cumartesi:</strong> 08:00 - 18:00</p>
+                                <p><strong>Pazar:</strong> 09:00 - 17:00</p>
+                                <small>Acil durumlar için 7/24 ulaşabilirsiniz</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Actions -->
+                    <div class="contact-actions" data-aos="fade-right" data-aos-delay="600">
+                        <a href="tel:+905486301648" class="premium-btn primary large">
+                            <span>Hemen Ara</span>
+                            <i class="fas fa-phone"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="mailto:tek_profil@hotmail.com" class="premium-btn secondary large">
+                            <span>E-posta Gönder</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.google.com/maps?q=40.8579942,29.3872412" 
+                           target="_blank" 
+                           class="premium-btn primary large">
+                            <span>Yol Tarifi Al</span>
+                            <i class="fas fa-route"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="contact-map" data-aos="fade-left" data-aos-delay="300">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.123456789!2d29.3872412!3d40.8579942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzI5LjAiTiAyOcKwMjMnMTQuMSJF!5e0!3m2!1str!2str!4v1640000000000!5m2!1str!2str"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Tek Alçıpan Profil Sistemleri Konum"
+                            aria-label="Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11 Çayırova, Kocaeli konumu">
+                        </iframe>
+                        
+                        <!-- Map Overlay -->
+                        <div class="map-overlay">
+                            <i class="fas fa-map-pin map-pin"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Contact CTA -->
+            <div class="text-center" style="margin-top: 60px;" data-aos="fade-up">
+                <h3 style="margin-bottom: 20px; color: var(--gray-800);">
+                    Projeniz İçin Özel Fiyat Teklifi Almak İster misiniz?
+                </h3>
+                <div class="hero-actions">
+                    <a href="tel:+905486301648" class="hero-btn primary">
+                        <span>Fiyat Teklifi İste</span>
+                        <i class="fas fa-calculator"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="Urunler.html" class="hero-btn secondary">
+                        <span>Ürünleri İncele</span>
+                        <i class="fas fa-cogs"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand-section">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="media/Logo.png" alt="Tek Alçıpan Logo">
+                        </div>
+                        <div class="footer-brand-info">
+                            <h3>Tek Alçıpan Profil Sistemleri</h3>
+                            <p>Kocaeli, Türkiye</p>
+                            <p class="footer-motto">"Dünyayı Profilliyoruz"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Bağlantılar</h4>
+                        <ul>
+                            <li><a href="Anasayfa.html">Anasayfa</a></li>
+                            <li><a href="Urunler.html">Ürünler</a></li>
+                            <li><a href="Iletisim.html">İletişim</a></li>
+                            <li><a href="Anasayfa.html#about">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Ürün Kategorileri</h4>
+                        <ul>
+                            <li><a href="Urunler.html">Alçıpan Profilleri</a></li>
+                            <li><a href="Urunler.html">Metal Profiller</a></li>
+                            <li><a href="Urunler.html">Aksesuarlar</a></li>
+                            <li><a href="Urunler.html">Özel Üretim</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>İletişim Bilgileri</h4>
+                        <ul>
+                            <li><a href="tel:+905486301648">0548 630 16 48</a></li>
+                            <li><a href="mailto:tek_profil@hotmail.com">tek_profil@hotmail.com</a></li>
+                            <li><a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" target="_blank">Çayırova, Kocaeli</a></li>
+                            <li><a href="#contact">İletişim Formu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Footer Emergency -->
+                <div class="footer-emergency">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="emergency-content">
+                            <h4>7/24 Destek Hattı</h4>
+                            <p>Profesyonel destek için</p>
+                            <a href="tel:+905486301648" class="emergency-number">0548 630 16 48</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Tek Alçıpan Profil Sistemleri. Tüm hakları saklıdır.</p>
+                    <p class="footer-love">❤️ ile Kocaeli'den</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Scroll Button -->
+    <button class="dynamic-scroll-btn visible" id="dynamicScrollBtn" aria-label="Dinamik Scroll">
+        <span class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Loading Screen Script -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

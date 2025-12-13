@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünler - Tek Alçıpan Profil Sistemleri</title>
+    <meta name="description" content="Tek Alçıpan Profil Sistemleri ürün kataloğu - Yüksek kaliteli alçıpan profilleri, metal profiller ve inşaat aksesuarları.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/Logo.png">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tekalcipanprofil.com/urunler">
+    <meta property="og:title" content="Ürünler - Tek Alçıpan Profil Sistemleri">
+    <meta property="og:description" content="Yüksek kaliteli alçıpan profilleri, metal profiller ve inşaat aksesuarları.">
+    <meta property="og:image" content="media/Logo.png">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProductCatalog",
+        "name": "Tek Alçıpan Profil Sistemleri Ürün Kataloğu",
+        "url": "https://tekalcipanprofil.com/urunler",
+        "description": "Yüksek kaliteli alçıpan profilleri, metal profiller ve inşaat aksesuarları kataloğu.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Tek Alçıpan Profil Sistemleri",
+            "url": "https://tekalcipanprofil.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="loading-logo-img">
+            </div>
+            <div class="loading-text">
+                <h2>Ürünlerimizi Keşfedin</h2>
+                <p>Kaliteli Profil Sistemleri</p>
+            </div>
+            <div class="loading-animation">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="premium-nav" id="premiumNav">
+        <div class="nav-container">
+            <!-- Brand -->
+            <a href="Anasayfa.html" class="nav-brand">
+                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="nav-logo-img">
+                <div class="nav-brand-info">
+                    <h1 class="nav-brand-title">Tek Alçıpan</h1>
+                    <p class="nav-brand-subtitle">
+                        <span class="subtitle-line">Profil Sistemleri</span>
+                        <span class="subtitle-name">Dünyayı Profilliyoruz</span>
+                    </p>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="Urunler.html" class="nav-link active">
+                    <i class="fas fa-cogs"></i>
+                    <span>Ürünler</span>
+                </a>
+                <a href="Iletisim.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>İletişim</span>
+                </a>
+            </div>
+
+            <!-- Emergency Actions -->
+            <div class="nav-emergency">
+                <a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" 
+                   target="_blank" class="location-btn" title="Konumumuzu Görüntüle">
+                    <div class="location-btn-content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="location-text">
+                            <strong>Konum</strong>
+                            <small>Çayırova, Kocaeli</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://wa.me/905486301648?text=Merhaba, ürünleriniz hakkında bilgi almak istiyorum." 
+                   target="_blank" class="whatsapp-btn" title="WhatsApp'tan Yazın">
+                    <div class="whatsapp-btn-content">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="whatsapp-text">
+                            <strong>WhatsApp</strong>
+                            <small>Hızlı İletişim</small>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="tel:+905486301648" class="emergency-btn" title="Hemen Ara">
+                    <div class="emergency-btn-content">
+                        <i class="fas fa-phone"></i>
+                        <div class="emergency-text">
+                            <strong>0548 630 16 48</strong>
+                            <small>7/24 Destek</small>
+                        </div>
+                    </div>
+                    <div class="emergency-pulse"></div>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü Aç/Kapat">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center" data-aos="fade-up">
+                <div class="section-badge">Ürün Kataloğu</div>
+                <h2 class="section-title">Premium Profil Sistemleri</h2>
+                <p class="section-subtitle">
+                    Yüksek kaliteli malzemelerle üretilen, dayanıklı ve güvenilir 
+                    alçıpan profil sistemleri ile projelerinize değer katın.
+                </p>
+            </div>
+
+            <!-- Top Products Slider -->
+            <div class="products-slider-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="products-slider" id="productsSlider">
+                    <div class="products-slide">
+                        <img src="media/1.jpg" alt="Premium Alçıpan Profil Sistemi 1" loading="lazy">
+                    </div>
+                    <div class="products-slide">
+                        <img src="media/2.jpg" alt="Premium Alçıpan Profil Sistemi 2" loading="lazy">
+                    </div>
+                    <div class="products-slide">
+                        <img src="media/3.jpg" alt="Premium Alçıpan Profil Sistemi 3" loading="lazy">
+                    </div>
+                    <div class="products-slide">
+                        <img src="media/4.jpg" alt="Premium Alçıpan Profil Sistemi 4" loading="lazy">
+                    </div>
+                    <div class="products-slide">
+                        <img src="media/5.jpg" alt="Premium Alçıpan Profil Sistemi 5" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Products Navigation -->
+                <div class="products-nav">
+                    <button class="products-nav-btn" id="productsPrev" aria-label="Önceki Ürün">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="products-nav-btn" id="productsNext" aria-label="Sonraki Ürün">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="section-header text-center" data-aos="fade-up" style="margin-top: 80px;">
+                <div class="section-badge">Ürün Kategorileri</div>
+                <h2 class="section-title">Geniş Ürün Yelpazesi</h2>
+                <p class="section-subtitle">
+                    Her türlü inşaat projenize uygun profesyonel çözümler sunuyoruz. 
+                    Kaliteli üretim ve uzman hizmetle yanınızdayız.
+                </p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" data-aos="fade-up" data-aos-delay="400">
+                <!-- Product 1 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="media/a1.jpg" alt="Alçıpan Metal Profil CD-60" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Metal Profil CD-60</h3>
+                        <p class="product-description">
+                            Yüksek dayanıklılık ve kolay montaj özelliği ile tercih edilen 
+                            CD-60 profil sistemleri. Galvanizli çelik malzemeden üretilmiştir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="media/a2.jpg" alt="Alçıpan Metal Profil UD-28" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Metal Profil UD-28</h3>
+                        <p class="product-description">
+                            Duvar ve tavan uygulamaları için ideal UD-28 profil sistemleri. 
+                            Korozyon direnci yüksek, uzun ömürlü kulanım sunar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="media/a3.jpg" alt="Alçıpan Köşe Profili" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Köşe Profili</h3>
+                        <p class="product-description">
+                            İç ve dış köşelerde mükemmel bitirme sağlayan köşe profilleri. 
+                            Estetik görünüm ve koruma sağlar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="media/a4.jpg" alt="Alçıpan Tavan Askısı" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Tavan Askısı</h3>
+                        <p class="product-description">
+                            Güvenli ve sağlam tavan montajı için gerekli askı sistemleri. 
+                            Yüksek yük taşıma kapasitesi ile güvenilir çözüm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="media/a5.jpg" alt="Alçıpan Bağlantı Elemanları" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Bağlantı Elemanları</h3>
+                        <p class="product-description">
+                            Profillerin güvenli birleştirilmesi için gerekli tüm bağlantı 
+                            elemanları. Dayanıklı ve pratik kulanım.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="media/a6.jpg" alt="Alçıpan Vidaları" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Vidaları</h3>
+                        <p class="product-description">
+                            Alçıpan montajında kullanılan özel vidalar. Kolay aplikasyon 
+                            ve güvenli tutunma özelliği ile tercih edilir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="media/a7.jpg" alt="Alçıpan Bantları" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Bantları</h3>
+                        <p class="product-description">
+                            Alçıpan levha birleştirmelerinde kullanılan profesyonel bantlar. 
+                            Çatlak önleyici özelliği ile uzun ömür sunar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="media/a8.jpg" alt="Alçıpan Macunu" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Macunu</h3>
+                        <p class="product-description">
+                            Yüksek yapışma gücü ve kolay uygulanabilirlik özelliği ile 
+                            profesyonel alçıpan macunları. Pürüzsüz yüzey elde edin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="media/a9.jpg" alt="Alçıpan Levhalar" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Alçıpan Levhalar</h3>
+                        <p class="product-description">
+                            Çeşitli kalınlık ve boyutlarda alçıpan levhalar. Su dirençli, 
+                            yangın dirençli ve standart seçenekler mevcuttur.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="media/a10.jpg" alt="Özel Üretim Profiller" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">Özel Üretim Profiller</h3>
+                        <p class="product-description">
+                            Projenizin özel ihtiyaçlarına göre tasarlanan ve üretilen 
+                            özel profil sistemleri. Her türlü özel çözüm için bizimle iletişime geçin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center" style="margin-top: 80px;" data-aos="fade-up">
+                <h3 style="margin-bottom: 20px; color: var(--gray-800);">
+                    Ürünlerimiz Hakkında Detaylı Bilgi Almak İster misiniz?
+                </h3>
+                <div class="hero-actions">
+                    <a href="Iletisim.html" class="hero-btn primary">
+                        <span>Fiyat Teklifi Al</span>
+                        <i class="fas fa-calculator"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="tel:+905486301648" class="hero-btn secondary">
+                        <span>Hemen Ara</span>
+                        <i class="fas fa-phone"></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand-section">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="media/Logo.png" alt="Tek Alçıpan Logo">
+                        </div>
+                        <div class="footer-brand-info">
+                            <h3>Tek Alçıpan Profil Sistemleri</h3>
+                            <p>Kocaeli, Türkiye</p>
+                            <p class="footer-motto">"Dünyayı Profilliyoruz"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Hızlı Bağlantılar</h4>
+                        <ul>
+                            <li><a href="Anasayfa.html">Anasayfa</a></li>
+                            <li><a href="Urunler.html">Ürünler</a></li>
+                            <li><a href="Iletisim.html">İletişim</a></li>
+                            <li><a href="Anasayfa.html#about">Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Ürün Kategorileri</h4>
+                        <ul>
+                            <li><a href="#products">Alçıpan Profilleri</a></li>
+                            <li><a href="#products">Metal Profiller</a></li>
+                            <li><a href="#products">Aksesuarlar</a></li>
+                            <li><a href="#products">Özel Üretim</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>İletişim Bilgileri</h4>
+                        <ul>
+                            <li><a href="tel:+905486301648">0548 630 16 48</a></li>
+                            <li><a href="mailto:tek_profil@hotmail.com">tek_profil@hotmail.com</a></li>
+                            <li><a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" target="_blank">Çayırova, Kocaeli</a></li>
+                            <li><a href="Iletisim.html">İletişim Formu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Footer Emergency -->
+                <div class="footer-emergency">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="emergency-content">
+                            <h4>7/24 Destek Hattı</h4>
+                            <p>Profesyonel destek için</p>
+                            <a href="tel:+905486301648" class="emergency-number">0548 630 16 48</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Tek Alçıpan Profil Sistemleri. Tüm hakları saklıdır.</p>
+                    <p class="footer-love">❤️ ile Kocaeli'den</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Scroll Button -->
+    <button class="dynamic-scroll-btn visible" id="dynamicScrollBtn" aria-label="Dinamik Scroll">
+        <span class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Loading Screen Script -->
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
