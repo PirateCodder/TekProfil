@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
 
 :root {
@@ -441,6 +441,12 @@ a {
     box-shadow: var(--shadow-lg);
     transition: all 0.3s var(--ease-bounce);
     overflow: hidden;
+    
+    /* Sabit boyut - küçülmez */
+    min-width: 160px;
+    min-height: 50px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .whatsapp-btn:hover {
@@ -699,44 +705,64 @@ a {
 
 .title-line {
     display: block;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: var(--space-3);
     padding: var(--space-2) 0;
     
-    /* Büyütülmiş font boyutu */
+    /* Büyütülmiş font boyutu - Poppins ile daha temiz */
     font-size: clamp(4rem, 12vw, 8rem);
     
-    /* Logo renklerinde gradient */
+    /* Logo renklerinde animasyonlu gradient */
     background: linear-gradient(135deg, 
         rgba(74, 156, 226, 1) 0%,     /* Logo açık mavi */
-        rgba(255, 255, 255, 1) 25%,   /* Beyaz */
-        rgba(41, 59, 124, 1) 50%,     /* Logo koyu mavi */
-        rgba(255, 255, 255, 1) 75%,   /* Beyaz */
-        rgba(74, 156, 226, 1) 100%);  /* Logo açık mavi */
+        rgba(255, 255, 255, 1) 20%,   /* Beyaz */
+        rgba(41, 59, 124, 1) 40%,     /* Logo koyu mavi */
+        rgba(255, 255, 255, 1) 60%,   /* Beyaz */
+        rgba(74, 156, 226, 1) 80%,    /* Logo açık mavi */
+        rgba(41, 59, 124, 1) 100%);   /* Logo koyu mavi son */
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     
-    /* Kenarlık kaldırıldı, sadece güçlü shadow */
+    /* Animasyonlu gradient efekti */
+    animation: gradientShift 4s ease-in-out infinite;
+    
+    /* Güçlü gölge efekti - Poppins için optimize edilmiş */
     text-shadow: 
-        0 6px 12px rgba(0, 0, 0, 0.9),
-        0 3px 6px rgba(0, 0, 0, 0.7),
-        0 12px 24px rgba(0, 0, 0, 0.5),
-        0 1px 3px rgba(255, 255, 255, 0.3);
+        0 8px 16px rgba(0, 0, 0, 0.8),
+        0 4px 8px rgba(0, 0, 0, 0.6),
+        0 16px 32px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(255, 255, 255, 0.2);
     
     position: relative;
     z-index: 100;
     
-    /* Font sharpening */
+    /* Poppins font optimizasyonu */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "liga" 1, "kern" 1;
-    letter-spacing: -0.03em;
+    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+    letter-spacing: -0.02em;
     
-    /* Animasyon efekti */
+    /* Hover animasyonu */
     transform: scale(1);
-    transition: all 0.3s var(--ease-bounce);
+    transition: all 0.4s var(--ease-bounce);
+    cursor: default;
+}
+
+/* Animasyonlu gradient keyframe */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .title-line:hover {
@@ -2191,8 +2217,23 @@ a {
         display: none;
     }
 
+    /* WhatsApp butonu - yer kalmayınca görünmez olacak */
     .whatsapp-btn {
-        display: none;
+        display: none !important;
+    }
+}
+
+/* WhatsApp butonunu gösterebileceğimiz minimum ekran genişliği */
+@media (min-width: 1100px) {
+    .whatsapp-btn {
+        display: flex !important;
+    }
+}
+
+/* Orta boyutlu ekranlarda WhatsApp butonunu gizle */
+@media (max-width: 1099px) {
+    .whatsapp-btn {
+        display: none !important;
     }
 
     .nav-brand-subtitle {
