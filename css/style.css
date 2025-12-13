@@ -706,36 +706,16 @@ a {
 .title-line {
     display: block;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: var(--space-3);
     padding: var(--space-2) 0;
     
-    /* Büyütülmiş font boyutu - Poppins ile daha temiz */
+    /* Büyütülmiş font boyutu - Poppins ile temiz */
     font-size: clamp(4rem, 12vw, 8rem);
     
-    /* Logo renklerinde animasyonlu gradient */
-    background: linear-gradient(135deg, 
-        rgba(74, 156, 226, 1) 0%,     /* Logo açık mavi */
-        rgba(255, 255, 255, 1) 20%,   /* Beyaz */
-        rgba(41, 59, 124, 1) 40%,     /* Logo koyu mavi */
-        rgba(255, 255, 255, 1) 60%,   /* Beyaz */
-        rgba(74, 156, 226, 1) 80%,    /* Logo açık mavi */
-        rgba(41, 59, 124, 1) 100%);   /* Logo koyu mavi son */
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    
-    /* Animasyonlu gradient efekti */
-    animation: gradientShift 4s ease-in-out infinite;
-    
-    /* Güçlü gölge efekti - Poppins için optimize edilmiş */
-    text-shadow: 
-        0 8px 16px rgba(0, 0, 0, 0.8),
-        0 4px 8px rgba(0, 0, 0, 0.6),
-        0 16px 32px rgba(0, 0, 0, 0.4),
-        0 2px 4px rgba(255, 255, 255, 0.2);
+    /* Sadece düz beyaz renk */
+    color: var(--white);
     
     position: relative;
     z-index: 100;
@@ -743,30 +723,7 @@ a {
     /* Poppins font optimizasyonu */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
     letter-spacing: -0.02em;
-    
-    /* Hover animasyonu */
-    transform: scale(1);
-    transition: all 0.4s var(--ease-bounce);
-    cursor: default;
-}
-
-/* Animasyonlu gradient keyframe */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.title-line:hover {
-    transform: scale(1.05);
 }
 
 /* Desktop specific title */
