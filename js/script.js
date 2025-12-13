@@ -132,7 +132,7 @@ class NavigationManager {
 
     getCurrentSection() {
         const path = window.location.pathname;
-        const page = path.split('/').pop() || 'Anasayfa.html';
+        const page = path.split('/').pop() || 'index.html';
         
         if (page.includes('Anasayfa') || page === '' || page === '/') {
             return 'hero';
@@ -218,7 +218,7 @@ class NavigationManager {
             const href = link.getAttribute('href');
             let isActive = false;
             
-            const currentPage = window.location.pathname.split('/').pop() || 'Anasayfa.html';
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
             if (href.includes('Anasayfa') && (currentPage.includes('Anasayfa') || currentPage === '' || currentPage === 'index.html')) {
                 isActive = true;
