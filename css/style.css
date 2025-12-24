@@ -1130,13 +1130,194 @@ a {
     overflow: hidden;
     box-shadow: var(--shadow-2xl);
     margin: 0 auto;
-    max-width: 1000px;
+    
+    /* Desktop için optimal boyutlama - 478x850px oranı korunur */
+    max-width: 478px;
+    width: 100%;
+    aspect-ratio: 478 / 850;
+    max-height: 70vh;
 }
 
 .video-container video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
     display: block;
+    background: var(--gray-100);
+    cursor: pointer;
+}
+
+/* Custom play button overlay */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0.9;
+    transition: all 0.3s var(--ease-bounce);
+    pointer-events: none;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.4);
+}
+
+.video-container::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 28px;
+    z-index: 11;
+    pointer-events: none;
+    transition: all 0.3s var(--ease-bounce);
+}
+
+/* Video başladığında play button'u gizle */
+.video-container.playing::before,
+.video-container.playing::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Video hover durumu */
+.video-container:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.5);
+}
+
+.video-container:hover::after {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Video controls her zaman görünür olsun */
+.video-container video::-webkit-media-controls {
+    opacity: 1 !important;
+}
+
+.video-container video::-webkit-media-controls-panel {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    border-radius: 0;
+}
+
+.video-container video::-webkit-media-controls-play-button {
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.video-container video::-webkit-media-controls-timeline {
+    background-color: var(--primary);
+}
+
+.video-container video::-webkit-media-controls-current-time-display,
+.video-container video::-webkit-media-controls-time-remaining-display {
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Firefox için */
+.video-container video::-moz-media-controls {
+    opacity: 1 !important;
+}
+
+/* Mobil için touch özelleştirmesi */
+@media (max-width: 768px) {
+    .video-container::before {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .video-container::after {
+        font-size: 24px;
+        left: 51.5%;
+    }
+    
+    /* Mobilde controls her zaman görünsün */
+    .video-container video {
+        -webkit-media-controls-start-playback-button: always-show;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container::before {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .video-container::after {
+        font-size: 20px;
+        left: 51.5%;
+    }
+}
+
+/* Desktop ekranlar için */
+@media (min-width: 1200px) {
+    .video-container {
+        max-width: 478px;
+        max-height: 600px;
+    }
+}
+
+/* Büyük tablet ekranlar için */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .video-container {
+        max-width: 400px;
+        max-height: 60vh;
+    }
+}
+
+/* Tablet portrait ve küçük laptop ekranlar için */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .video-container {
+        max-width: 380px;
+        max-height: 55vh;
+    }
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 767px) {
+    .video-section {
+        padding: var(--space-16) 0;
+    }
+    
+    .video-container {
+        max-width: 320px;
+        max-height: 50vh;
+        border-radius: var(--radius-2xl);
+        margin: 0 auto;
+    }
+}
+
+/* Küçük mobil ekranlar için */
+@media (max-width: 480px) {
+    .video-section {
+        padding: var(--space-12) 0;
+    }
+    
+    .video-container {
+        max-width: 280px;
+        max-height: 45vh;
+        border-radius: var(--radius-xl);
+    }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 360px) {
+    .video-container {
+        max-width: 250px;
+        max-height: 40vh;
+    }
 }
 
 /* STATS SECTION */
@@ -2176,7 +2357,7 @@ a {
     }
     
     .mobile-menu-toggle {
-        display: flex;
+        display: none !important;
     }
     
     .nav-container {
@@ -2195,10 +2376,12 @@ a {
     }
     
     .location-btn {
-        padding: var(--space-4) var(--space-5);
-        min-width: 60px;
-        min-height: 50px;
+        padding: var(--space-3) var(--space-3);
+        width: 56px; /* Daha dar genişlik */
+        height: 50px; /* Sabit yükseklik */
         font-size: 1.125rem;
+        flex-shrink: 0; /* Küçülmeyi engelle */
+        justify-content: center; /* İkonu merkeze hizala */
     }
     
     .location-btn i {
@@ -2210,10 +2393,12 @@ a {
     }
     
     .emergency-btn {
-        padding: var(--space-4) var(--space-5);
-        min-width: 60px;
-        min-height: 50px;
+        padding: var(--space-3) var(--space-3);
+        width: 56px; /* Daha dar genişlik - konum butonu ile aynı */
+        height: 50px; /* Sabit yükseklik */
         font-size: 1.125rem;
+        flex-shrink: 0; /* Küçülmeyi engelle */
+        justify-content: center; /* İkonu merkeze hizala */
     }
     
     .emergency-btn i {

@@ -109,6 +109,7 @@ class DirectManager {
         productsManager.init();
         scrollManager.init();
         interactionManager.init();
+        videoManager.init();
         
         document.body.classList.add('loaded');
     }
@@ -1208,6 +1209,116 @@ if (!('scrollBehavior' in document.documentElement.style)) {
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
 }
+
+// Video Manager Class
+class VideoManager {
+    constructor() {
+        this.videoContainers = document.querySelectorAll('.video-container');
+        this.videos = document.querySelectorAll('.video-container video');
+        this.isInitialized = false;
+    }
+
+    init() {
+        if (this.isInitialized) return;
+        this.isInitialized = true;
+
+        this.videos.forEach((video, index) => {
+            this.setupVideo(video, this.videoContainers[index]);
+        });
+    }
+
+    setupVideo(video, container) {
+        if (!video || !container) return;
+
+        // Video events
+        video.addEventListener('play', () => {
+            container.classList.add('playing');
+        });
+
+        video.addEventListener('pause', () => {
+            container.classList.remove('playing');
+        });
+
+        video.addEventListener('ended', () => {
+            container.classList.remove('playing');
+        });
+
+        // Container click to play/pause
+        container.addEventListener('click', (e) => {
+            // Don't interfere with native controls
+            const clickedElement = e.target;
+            const isControl = clickedElement.tagName === 'VIDEO' || 
+                             clickedElement.closest('[controls]') || 
+                             clickedElement.matches('video::-webkit-media-controls, video::-webkit-media-controls-panel, video::-webkit-media-controls-play-button, video::-webkit-media-controls-timeline, video::-webkit-media-controls-current-time-display, video::-webkit-media-controls-time-remaining-display, video::-webkit-media-controls-mute-button, video::-webkit-media-controls-volume-slider, video::-webkit-media-controls-fullscreen-button');
+            
+            if (isControl) return;
+
+            // If clicked on custom play button area and video is paused
+            if (video.paused) {
+                video.play().catch(error => {
+                    console.log('Video play failed:', error);
+                });
+            }
+        });
+
+        // Show controls on hover for desktop
+        if (window.innerWidth > 768) {
+            container.addEventListener('mouseenter', () => {
+                if (!video.paused) {
+                    this.showControls(video);
+                }
+            });
+
+            container.addEventListener('mouseleave', () => {
+                this.hideControls(video);
+            });
+        }
+
+        // Mobile touch events
+        this.setupMobileEvents(video, container);
+    }
+
+    setupMobileEvents(video, container) {
+        let touchStartTime = 0;
+        let touchEndTime = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            touchStartTime = Date.now();
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+            touchEndTime = Date.now();
+            const touchDuration = touchEndTime - touchStartTime;
+
+            // Quick tap - play/pause
+            if (touchDuration < 300) {
+                const clickedElement = e.target;
+                const isControl = clickedElement.tagName === 'VIDEO' || 
+                                 clickedElement.closest('[controls]');
+                
+                if (!isControl && video.paused) {
+                    e.preventDefault();
+                    video.play().catch(error => {
+                        console.log('Video play failed:', error);
+                    });
+                }
+            }
+        }, { passive: false });
+    }
+
+    showControls(video) {
+        if (video) {
+            video.setAttribute('controls', 'controls');
+        }
+    }
+
+    hideControls(video) {
+        // Don't hide controls completely, let them fade naturally
+        // This is handled by CSS
+    }
+}
+
+const videoManager = new VideoManager();
 
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     window.tekAlcipan = {
