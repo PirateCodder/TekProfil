@@ -222,6 +222,7 @@ a {
     right: 0;
     z-index: 1000;
     background: rgba(220, 240, 255, 0.95);
+    -webkit-backdrop-filter: var(--backdrop-blur);
     backdrop-filter: var(--backdrop-blur);
     border-bottom: 1px solid var(--glass-border);
     padding: var(--space-4) 0;
@@ -514,7 +515,7 @@ a {
     .hero-section {
         height: 100vh;
         min-height: 700px;
-        padding-top: 100px; /* Mobil için daha az padding */
+        padding-top: 150px;
     }
 }
 
@@ -522,7 +523,7 @@ a {
     .hero-section {
         height: 100vh;
         min-height: 750px;
-        padding-top: 90px; /* Küçük mobil için daha az padding */
+        padding-top: 160px;
     }
 }
 
@@ -655,7 +656,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -60px; /* Navbar padding'ini dengelemek için */
+    margin-top: 0;
 }
 
 .hero-container {
@@ -749,7 +750,7 @@ a {
 
 @media (max-width: 480px) {
     .title-line {
-        font-size: clamp(2.8rem, 12vw, 4.5rem);
+        font-size: clamp(3rem, 12vw, 5rem);
         padding: var(--space-3) 0;
         margin-bottom: var(--space-2);
         line-height: 0.95;
@@ -870,6 +871,7 @@ a {
     overflow: hidden;
     min-width: 180px;
     justify-content: center;
+    -webkit-backdrop-filter: var(--backdrop-blur);
     backdrop-filter: var(--backdrop-blur);
     border: 2px solid transparent;
 }
@@ -1070,6 +1072,7 @@ a {
     height: 60px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: var(--backdrop-blur);
     backdrop-filter: var(--backdrop-blur);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: var(--white);
@@ -1553,6 +1556,7 @@ a {
     height: 50px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: var(--backdrop-blur);
     backdrop-filter: var(--backdrop-blur);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: var(--gray-700);
@@ -1770,6 +1774,106 @@ a {
 .map-pin {
     color: var(--primary);
     font-size: 1.5rem;
+}
+
+.map-floating-btn {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    z-index: 999; /* Z-index artırıldı */
+    
+    background: var(--gradient-primary);
+    color: var(--white) !important;
+    
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* İçeriği ortala */
+    gap: 10px;
+    
+    /* Genişlik ayarları - Kaymayı önler */
+    width: auto;
+    max-width: fit-content;
+    white-space: nowrap !important; /* Yazının asla alt satıra inmemesini sağlar */
+    height: 48px; /* Sabit yükseklik vererek ezilmeyi önle */
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 2px solid white;
+    cursor: pointer;
+    
+    /* Animasyon ayarları */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* Seçim ve Focus engelleme */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important; /* Focus çerçevesini kaldır */
+}
+
+.map-floating-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.map-floating-btn:active {
+    transform: scale(0.95);
+}
+
+/* Focus durumunda stil değişikliğini engelle */
+.map-floating-btn:focus,
+.map-floating-btn:focus-visible {
+    outline: none !important;
+    transform: none !important; 
+    position: absolute !important;
+    bottom: 35px !important;
+    right: 25px !important;
+}
+
+/* Focus sonrası state sıfırlama */
+.map-floating-btn:not(:hover):not(:active) {
+    transform: none !important;
+}
+
+/* Buton pozisyonunu garanti altına alma */
+.map-floating-btn {
+    position: absolute !important;
+    bottom: 35px !important;
+    right: 25px !important;
+    /* Diğer özellikler aynı kalacak */
+}
+
+/* Mobil için pozisyon garantisi */
+@media (max-width: 768px) {
+    .map-floating-btn,
+    .map-floating-btn:focus,
+    .map-floating-btn:focus-visible,
+    .map-floating-btn:not(:hover):not(:active) {
+        bottom: 30px !important;
+        right: 15px !important;
+        position: absolute !important;
+    }
+}
+
+.map-floating-btn i,
+.map-floating-btn span {
+    color: white !important;
+    pointer-events: none;
+    line-height: 1; /* Satır yüksekliğini sabitle */
+}
+
+/* Mobilde buton ayarları */
+@media (max-width: 768px) {
+    .map-floating-btn {
+        padding: 0 20px; /* Padding'i yatayda ver, dikeyde height halleder */
+        bottom: 30px;
+        right: 15px;
+        font-size: 0.9rem;
+        height: 42px; /* Mobilde biraz daha ince */
+    }
 }
 
 /* FOOTER */
@@ -2194,18 +2298,19 @@ a {
         z-index: 10;
     }
     
-    .decoration-card {
-        min-width: auto;
-        width: 48%;
-        max-width: 180px;
-        margin-bottom: var(--space-3);
-    }
-
-    /* Contact Section Mobile Fixes */
-    .contact-content {
-        grid-template-columns: 1fr !important;
-        gap: var(--space-8) !important;
-    }
+.decoration-card {
+    background: var(--white);
+    padding: var(--space-4);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-width: 200px;
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
     
     .contact-items {
         display: flex !important;
@@ -2457,6 +2562,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: var(--space-3);
+    -webkit-backdrop-filter: var(--backdrop-blur);
     backdrop-filter: var(--backdrop-blur);
 }
 

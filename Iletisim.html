@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim - Tek Alçıpan Profil Sistemleri</title>
-    <meta name="description" content="Tek Alçıpan Profil Sistemleri ile iletişime geçin. Çayırova, Kocaeli adresimizden bizi ziyaret edin veya telefon ile ulaşın.">
+    <title>İletişim - Tek Alçıpan Profil Sistemleri | Şekerpınar Çayırova</title>
+    <meta name="description" content="Şekerpınar Mahallesi, Çayırova, Kocaeli konumundaki Tek Alçıpan Profil Sistemleri ile iletişime geçin. 0532 666 74 29 numaralı telefondan bize ulaşın.">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -21,35 +21,45 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tekalcipanprofil.com/iletisim">
-    <meta property="og:title" content="İletişim - Tek Alçıpan Profil Sistemleri">
-    <meta property="og:description" content="Çayırova, Kocaeli adresimizden bizi ziyaret edin veya telefon ile ulaşın. 7/24 profesyonel destek.">
+    <meta property="og:title" content="İletişim - Tek Alçıpan Profil Sistemleri | Şekerpınar Çayırova">
+    <meta property="og:description" content="Şekerpınar Mahallesi, Çayırova, Kocaeli konumundaki alçıpan profil sistemleri satış noktası ile iletişim bilgileri.">
     <meta property="og:image" content="media/Logo.png">
     
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "İletişim - Tek Alçıpan Profil Sistemleri",
+        "@type": "LocalBusiness",
+        "name": "Tek Alçıpan Profil Sistemleri",
         "url": "https://tekalcipanprofil.com/iletisim",
-        "description": "Tek Alçıpan Profil Sistemleri iletişim bilgileri ve konum.",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "Tek Alçıpan Profil Sistemleri",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11",
-                "addressLocality": "Çayırova",
-                "addressRegion": "Kocaeli",
-                "addressCountry": "TR"
-            },
-            "contactPoint": {
+        "description": "Şekerpınar, Çayırova konumunda alçıpan profil sistemleri satış ve hizmet merkezi.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11",
+            "addressLocality": "Çayırova", 
+            "addressRegion": "Kocaeli",
+            "postalCode": "41400",
+            "addressCountry": "TR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.8579942",
+            "longitude": "29.3872412"
+        },
+        "contactPoint": [
+            {
                 "@type": "ContactPoint",
                 "telephone": "+90-532-666-74-29",
                 "contactType": "customer service",
-                "email": "tek_profil@hotmail.com"
+                "email": "tek_profil@hotmail.com",
+                "availableLanguage": "Turkish"
             }
-        }
+        ],
+        "openingHours": [
+            "Mo-Sa 08:00-18:00",
+            "Su 09:00-17:00"
+        ],
+        "priceRange": "$$"
     }
     </script>
 </head>
@@ -58,7 +68,7 @@
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <div class="loading-logo">
-                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="loading-logo-img">
+                <img src="media/Logo.png" alt="Tek Alçıpan Profil Sistemleri Logo - Şekerpınar Çayırova" class="loading-logo-img">
             </div>
             <div class="loading-text">
                 <h2>İletişime Geçin</h2>
@@ -75,7 +85,7 @@
         <div class="nav-container">
             <!-- Brand -->
             <a href="index.html" class="nav-brand">
-                <img src="media/Logo.png" alt="Tek Alçıpan Logo" class="nav-logo-img">
+            <img src="media/Logo.png" alt="Tek Alçıpan Profil Sistemleri Logo - Şekerpınar Çayırova" class="nav-logo-img">
                 <div class="nav-brand-info">
                     <h1 class="nav-brand-title">Tek Alçıpan</h1>
                     <p class="nav-brand-subtitle">
@@ -99,8 +109,7 @@
 
             <!-- Emergency Actions -->
             <div class="nav-emergency">
-                <a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" 
-                   target="_blank" class="location-btn" title="Konumumuzu Görüntüle">
+                <a href="javascript:void(0)" onclick="openMaps()" class="location-btn" title="Konumumuzu Görüntüle">
                     <div class="location-btn-content">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="location-text">
@@ -234,9 +243,7 @@
                             <span>E-posta Gönder</span>
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://www.google.com/maps?q=40.8579942,29.3872412" 
-                           target="_blank" 
-                           class="premium-btn primary large">
+                        <a href="javascript:void(0)" onclick="openMaps()" class="premium-btn primary large">
                             <span>Yol Tarifi Al</span>
                             <i class="fas fa-route"></i>
                             <div class="btn-shine"></div>
@@ -248,7 +255,7 @@
                 <div class="contact-map" data-aos="fade-left" data-aos-delay="300">
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.123456789!2d29.3872412!3d40.8579942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzI5LjAiTiAyOcKwMjMnMTQuMSJF!5e0!3m2!1str!2str!4v1640000000000!5m2!1str!2str"
+                            src="https://maps.google.com/maps?q=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova,+Kocaeli&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -262,6 +269,11 @@
                         <!-- Map Overlay -->
                         <div class="map-overlay">
                             <i class="fas fa-map-pin map-pin"></i>
+                        </div>
+                        
+                        <!-- Map Floating Button -->
+                        <div onclick="openMaps(event)" class="map-floating-btn" role="button" tabindex="0">
+                            <i class="fas fa-location-arrow"></i> <span>Yol Tarifi Al</span>
                         </div>
                     </div>
                 </div>
@@ -334,7 +346,7 @@
                         <ul>
                             <li><a href="tel:+905326667429">0532 666 74 29</a></li>
                             <li><a href="mailto:tek_profil@hotmail.com">tek_profil@hotmail.com</a></li>
-                            <li><a href="https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli" target="_blank">Çayırova, Kocaeli</a></li>
+                            <li><a href="javascript:void(0)" onclick="openMaps()">Çayırova, Kocaeli</a></li>
                             <li><a href="#contact">İletişim Formu</a></li>
                         </ul>
                     </div>

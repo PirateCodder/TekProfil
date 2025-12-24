@@ -1117,39 +1117,82 @@ if (document.readyState === 'loading') {
 
 window.TekAlcipanApp = tekAlcipanApp;
 
-function openMaps() {
-    const address = "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11 Çayırova, Kocaeli";
-    const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Şekerpınar+Mahallesi+Fevzi+Çakmak+caddesi+no:11+Çayırova+kocaeli";
-    
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-    
-    if (isIOS) {
-        const appleMapsUrl = `maps://maps.apple.com/?q=${encodeURIComponent(address)}`;
-        window.location.href = appleMapsUrl;
-        
-        setTimeout(() => {
-            window.open(googleMapsUrl, '_blank');
-        }, 1500);
-        
-    } else if (isAndroid) {
-        const googleNavUrl = `google.navigation:q=${encodeURIComponent(address)}`;
-        
-        try {
-            window.location.href = googleNavUrl;
-            
-            setTimeout(() => {
-                window.open(googleMapsUrl, '_blank');
-            }, 1500);
-        } catch (error) {
-            window.open(googleMapsUrl, '_blank');
-        }
-        
-    } else {
-        window.open(googleMapsUrl, '_blank');
+/* YENİ OPENMAPS FONKSİYONU (Enhanced Fix Version) */
+function openMaps(e) {
+    // 1. Tıklama olayının yayılmasını durdur
+    if(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
     }
-}
 
+    // 2. Butonu bul ve state'lerini temizle
+    const mapButton = document.querySelector('.map-floating-btn');
+    
+    // 3. Güçlendirilmiş Focus yönetimi
+    if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+    }
+    
+    // 4. Buton üzerindeki tüm state'leri temizle
+    if (mapButton) {
+        // CSS class'larını temizle
+        mapButton.classList.remove('active', 'focus', 'hover');
+        
+        // Style'ı sıfırla
+        mapButton.style.transform = '';
+        mapButton.style.position = 'absolute';
+        mapButton.style.bottom = window.innerWidth <= 768 ? '30px' : '35px';
+        mapButton.style.right = window.innerWidth <= 768 ? '15px' : '25px';
+        
+        // Focus'u kaldır
+        mapButton.blur();
+        
+        // Mouse leave simülasyonu
+        const mouseLeaveEvent = new MouseEvent('mouseleave', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+        });
+        mapButton.dispatchEvent(mouseLeaveEvent);
+    }
+
+    // 5. Adres ve Yönlendirme İşlemleri
+    const address = "Şekerpınar Mahallesi Fevzi Çakmak caddesi no:11 Çayırova, Kocaeli";
+    const encodedAddress = encodeURIComponent(address);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    // 6. Pozisyon sıfırlama timeout'u
+    setTimeout(() => {
+        if (mapButton) {
+            mapButton.style.transform = '';
+            mapButton.style.position = 'absolute';
+            mapButton.style.bottom = window.innerWidth <= 768 ? '30px' : '35px';
+            mapButton.style.right = window.innerWidth <= 768 ? '15px' : '25px';
+        }
+    }, 100);
+
+    // 7. Yönlendirme işlemi
+    if (isIOS) {
+        window.location.href = `maps://?q=${encodedAddress}`;
+        setTimeout(() => {
+            window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+        }, 1000);
+    } else {
+        window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+    }
+    
+    // 8. Son kontrol - 500ms sonra pozisyonu garantile
+    setTimeout(() => {
+        if (mapButton) {
+            mapButton.style.transform = '';
+            mapButton.style.position = 'absolute';
+            mapButton.style.bottom = window.innerWidth <= 768 ? '30px' : '35px';
+            mapButton.style.right = window.innerWidth <= 768 ? '15px' : '25px';
+            mapButton.blur();
+        }
+    }, 500);
+}
 window.openMaps = openMaps;
 
 if (!('scrollBehavior' in document.documentElement.style)) {
