@@ -758,12 +758,13 @@ a {
     }
 }
 
-/* Her kelime için ayrı renk vurgusu */
+/* Her kelime için ayrı renk vurgusu - iyileştirilmiş gradient */
 .title-line:first-child {
     background: linear-gradient(135deg, 
-        rgba(74, 156, 226, 1) 0%,     /* Logo açık mavi */
-        rgba(255, 255, 255, 1) 50%,   /* Beyaz */
-        rgba(74, 156, 226, 1) 100%);  /* Logo açık mavi */
+        rgba(74, 156, 226, 0.7) 0%,     /* Logo açık mavi - daha açık */
+        rgba(255, 255, 255, 1) 20%,     /* Beyaz başlangıcı erken */
+        rgba(255, 255, 255, 1) 80%,     /* Beyaz sonu geç */
+        rgba(74, 156, 226, 0.7) 100%);  /* Logo açık mavi - daha açık */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -771,9 +772,10 @@ a {
 
 .title-line:last-child {
     background: linear-gradient(135deg, 
-        rgba(41, 59, 124, 1) 0%,      /* Logo koyu mavi */
-        rgba(255, 255, 255, 1) 50%,   /* Beyaz */
-        rgba(41, 59, 124, 1) 100%);   /* Logo koyu mavi */
+        rgba(41, 59, 124, 0.6) 0%,      /* Logo koyu mavi - daha açık */
+        rgba(255, 255, 255, 1) 20%,     /* Beyaz başlangıcı erken */
+        rgba(255, 255, 255, 1) 80%,     /* Beyaz sonu geç */
+        rgba(41, 59, 124, 0.6) 100%);   /* Logo koyu mavi - daha açık */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -786,13 +788,13 @@ a {
     background-clip: text;
 }
 
-/* Keep subtitle gradient text black for readability */
+/* Make subtitle gradient text white in hero section */
 .hero-section .hero-subtitle .gradient-text {
     background: none !important;
     -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: var(--black) !important;
+    -webkit-text-fill-color: var(--white) !important;
     background-clip: unset !important;
-    color: var(--black) !important;
+    color: var(--white) !important;
     font-weight: 700;
 }
 
@@ -1092,28 +1094,15 @@ a {
 }
 
 .hero-indicators {
-    position: absolute;
-    bottom: var(--space-8);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: var(--space-3);
-    z-index: 20;
+    display: none !important;
 }
 
 .hero-indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s var(--ease-bounce);
+    display: none !important;
 }
 
 .hero-indicator.active {
-    background: var(--white);
-    transform: scale(1.5);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    display: none !important;
 }
 
 /* VIDEO SECTION */
