@@ -1093,17 +1093,6 @@ a {
     box-shadow: var(--shadow-xl);
 }
 
-.hero-indicators {
-    display: none !important;
-}
-
-.hero-indicator {
-    display: none !important;
-}
-
-.hero-indicator.active {
-    display: none !important;
-}
 
 /* VIDEO SECTION */
 .video-section {
@@ -2070,29 +2059,6 @@ a {
     font-style: italic;
 }
 
-.footer-social {
-    display: flex;
-    gap: var(--space-3);
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    background: var(--gray-700);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.25rem;
-    transition: all 0.3s var(--ease-bounce);
-}
-
-.social-link:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-    color: var(--white);
-}
 
 
 .dynamic-scroll-btn {
@@ -2213,9 +2179,6 @@ a {
         display: none;
     }
     
-    .mobile-menu-toggle {
-        display: none !important;
-    }
     
     .nav-container {
         padding: 0 var(--space-4);
@@ -2944,4 +2907,29 @@ input:focus-visible {
         height: auto;
         min-height: auto;
     }
+}
+
+/* --- FINAL IOS SAFARI FIX (COMPLETE) --- */
+/* Claude Analysis: Added .fa-regular to ensure coverage */
+.fa, .fas, .fa-solid, .fa-regular {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Brands (Instagram, WhatsApp vb.) için ayrı kural */
+.fab, .fa-brands {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
 }
