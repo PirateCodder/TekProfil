@@ -118,7 +118,6 @@ class NavigationManager {
     constructor() {
         this.nav = document.getElementById('premiumNav');
         this.navLinks = document.querySelectorAll('.nav-link');
-        this.mobileToggle = document.getElementById('mobileMenuToggle');
         this.isScrolled = false;
         this.activeSection = this.getCurrentSection();
     }
@@ -168,12 +167,6 @@ class NavigationManager {
         }, CONFIG.scroll.debounce);
 
         window.addEventListener('scroll', scrollHandler, { passive: true });
-
-        if (this.mobileToggle) {
-            this.mobileToggle.addEventListener('click', () => {
-                this.toggleMobileMenu();
-            });
-        }
     }
 
     handleScroll() {
@@ -249,10 +242,6 @@ class NavigationManager {
             top: elementTop,
             behavior: 'smooth'
         });
-    }
-
-    toggleMobileMenu() {
-        console.log('Mobile menu toggle');
     }
 }
 
